@@ -1,0 +1,17 @@
+README.md
+setup.py
+formula_generator.egg-info/PKG-INFO
+formula_generator.egg-info/SOURCES.txt
+formula_generator.egg-info/dependency_links.txt
+formula_generator.egg-info/requires.txt
+formula_generator.egg-info/top_level.txt
+project/FormulaGenerator.py
+project/__init__.py
+project/main.py
+project/main2.py
+project/package/__init__.py
+project/package/parseFormula.py
+project/package/parseTree.py
+project/package/propParser.py
+project/package/parse/__init__.py
+project/package/parse/parser.py

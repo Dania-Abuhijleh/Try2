@@ -1,0 +1,2 @@
+(declare-fun plus (Int Int) Int) (declare-fun minus (Int Int) Int) (declare-const x Int) (declare-const y Int) (declare-const z Int) (assert (= (plus x (plus y z)) (plus (plus x y) z)))
+[['plus', 'minus']]

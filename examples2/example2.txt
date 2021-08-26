@@ -1,0 +1,2 @@
+(declare-const P Bool) (assert (= (or P P) P))
+[['Implies', '=='], ['Or','And']]
