@@ -1,0 +1,22 @@
+
+language: python
+python:
+  - 3.6
+
+# Update pip to the latest version
+before_install:
+  - python --version
+  - pip install -U pip
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python -m unittest tests/multiplication_tests.py
+
+deploy:
+  provider: pypi
+  username: "__token__"
+  password: "pypi-AgEIcHlwaS5vcmcCJDk3YmU3Y2M2LWI3ZjgtNDlmYy1iYzc2LTBjMjgyZjYzMjEwNQACQnsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJmb3JtdWxhLWdlbmVyYXRvciJdfSwgInZlcnNpb24iOiAxfQAABiANze9G3FuFSAZ6jbFmZRDXiUZCyKLd0VqH-slrRzKaLw"
+  on:
+    branch: master
