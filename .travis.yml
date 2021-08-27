@@ -12,7 +12,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - python -m unittest Try2-main\project\formula_gen_tests.py
+  - python -m unittest project\formula_gen_tests.py
  
 deploy:
   provider: pypi
