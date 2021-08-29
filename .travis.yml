@@ -19,4 +19,4 @@ deploy:
   username: "__token__"
   password: "pypi-AgEIcHlwaS5vcmcCJDk3YmU3Y2M2LWI3ZjgtNDlmYy1iYzc2LTBjMjgyZjYzMjEwNQACQnsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJmb3JtdWxhLWdlbmVyYXRvciJdfSwgInZlcnNpb24iOiAxfQAABiANze9G3FuFSAZ6jbFmZRDXiUZCyKLd0VqH-slrRzKaLw"
   on:
-    branch: master
+    branch: main
