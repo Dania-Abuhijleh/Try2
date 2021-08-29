@@ -17,6 +17,8 @@ script:
   - ls .
   - cd ..
   - ls .
+  - cd /home/travis/virtualenv/python3.6.7/bin/z3
+  - ls .
   - whereis python
   - whereis z3
   - whereis z3-solver
