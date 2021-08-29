@@ -9,6 +9,7 @@ from typing import List, Set
 import builtins
 builtins.Z3_LIB_DIRS = ['C:/Users/dania/AppData/Local/Programs/Python/Python39/Lib/site-packages/z3/lib/libz3.dll']
 import z3
+from z3 import Solver
 from z3 import *
 from pythonds.basic import Stack
 from pythonds.trees import BinaryTree
