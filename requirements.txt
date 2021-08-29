@@ -2,3 +2,4 @@ z3
 pythonds
 click
 z3-solver
+python-z3
