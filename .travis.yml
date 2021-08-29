@@ -12,17 +12,6 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - cd ..
-  - cd ..
-  - ls .
-  - cd ..
-  - ls .
-  - cd /home/travis/virtualenv/python3.6.7/bin
-  - cd z3
-  - ls .
-  - whereis python
-  - whereis z3
-  - whereis z3-solver
   - cd fall-2021/project
   - python -m unittest formula_gen_tests.py
  
