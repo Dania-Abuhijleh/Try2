@@ -17,7 +17,7 @@ script:
   - ls .
   - cd ..
   - ls .
-  - where z3-solver
+  - whereis z3-solver
   - cd fall-2021/project
   - python -m unittest formula_gen_tests.py
  
