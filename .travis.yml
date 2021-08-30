@@ -12,6 +12,15 @@ install:
   - pip install -r requirements.txt
 
 script:
+  - git clone https://github.com/Z3Prover/z3.git
+  - cd z3
+  - python3 scripts/mk_make.py --python
+  - cd build
+  - make
+  - sudo make install
+  - ls .
+  - cd ..
+  - ls .
   - cd fall-2021/project
   - python -m unittest formula_gen_tests.py
  
