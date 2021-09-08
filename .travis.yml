@@ -12,6 +12,9 @@ install:
   - pip install -r requirements.txt
 
 script:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+  - sudo apt-get update
+  - sudo apt-get install g++-7
   - git clone https://github.com/Z3Prover/z3.git
   - cd z3
   - python3 scripts/mk_make.py --python
