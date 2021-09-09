@@ -1,4 +1,0 @@
-pythonds
-click
-z3-solver
-z3
