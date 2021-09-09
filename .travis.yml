@@ -13,6 +13,10 @@ install:
 
 script:
   - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  - echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/travis/.bash_profile
+  - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  - sudo apt-get install build-essential
+  - brew install gcc
   - brew install gh
   - gh release download z3_solver-4.8.12.0-py2.py3-none-manylinux1_x86_64.whl
 #   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
