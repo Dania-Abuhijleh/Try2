@@ -12,13 +12,13 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  - echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/travis/.bash_profile
-  - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  - sudo apt-get install build-essential
-  - brew install gcc
-  - brew install gh
-  - gh release download z3_solver-4.8.12.0-py2.py3-none-manylinux1_x86_64.whl
+#   - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#   - echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/travis/.bash_profile
+#   - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#   - sudo apt-get install build-essential
+#   - brew install gcc
+#   - brew install gh
+#   - gh release download z3_solver-4.8.12.0-py2.py3-none-manylinux1_x86_64.whl
 #   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 #   - sudo apt-get update
 #   - sudo apt-get install g++-7
@@ -31,8 +31,8 @@ script:
 #   - make
 #   - sudo make install
   - ls .
-  - cd ..
-  - ls .
+#   - cd ..
+#   - ls .
   - cd fall-2021/project
   - python -m unittest formula_gen_tests.py
  
