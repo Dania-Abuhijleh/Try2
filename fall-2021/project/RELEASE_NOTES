@@ -927,7 +927,7 @@ The following bugs are fixed in this release:
 
 - Non-termination problem associated with option LOOKAHEAD=true.
   It gets set for QF_UF in auto-configuration mode.
-  Thanks to Pierre-Christophe BuÈ.
+  Thanks to Pierre-Christophe Bu√©.
 
 - Incorrect axioms created for injective functions.
   Thanks to Sascha Boehme.
@@ -949,7 +949,7 @@ Version 2.6
 ===========
 
 This release fixes a few bugs.
-Thanks to Marko K‰‰ramees for reporting a bug in the strong context simplifier and
+Thanks to Marko K√§√§ramees for reporting a bug in the strong context simplifier and
 to Josh Berdine. 
 
 This release also introduces some new preprocessing features:
@@ -981,7 +981,7 @@ This release introduces the following features:
   <tt>Z3_update_param_value</tt> in the C API. This is particularly useful
   for turning the strong context simplifier on and off.  
  
-It also fixes bugs reported by Enric RodrÌguez Carbonell, 
+It also fixes bugs reported by Enric Rodr√≠guez Carbonell, 
 Nuno Lopes, Josh Berdine, Ethan Jackson, Rob Quigley and 
 Lucas Cordeiro.
 
@@ -1048,7 +1048,7 @@ Version 2.1
 ===========
 
 This is a bug fix release.
-Many thanks to Robert Brummayer, Carine Pascal, FranÁois Remy, 
+Many thanks to Robert Brummayer, Carine Pascal, Fran√ßois Remy, 
 Rajesh K Karmani, Roberto Lublinerman and numerous others for their 
 feedback and bug reports.
 
