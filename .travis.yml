@@ -30,13 +30,13 @@ script:
 #   - g++ -std=c++17 -o testcode1 ../src/shell/gparams_register_modules.cpp
 #   - make
 #   - sudo make install
-  - cd z3-z3-4.8.12
-  - python3 scripts/mk_make.py --python
-  - cd build
-  - make
-  - sudo make install
-  - ls .
-  - cd ..
+#   - cd z3-z3-4.8.12
+#   - python3 scripts/mk_make.py --python
+#   - cd build
+#   - make
+#   - sudo make install
+#   - ls .
+#   - cd ..
   - ls .
   - cd fall-2021/project
   - python -m unittest formula_gen_tests.py
