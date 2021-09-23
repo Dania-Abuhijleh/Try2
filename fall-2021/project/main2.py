@@ -20,6 +20,10 @@ current_module = sys.modules[__name__]
 #TODO move the cmd line func out and let it call the class
 @click.command()
 @click.argument('filepath', type=click.Path(exists=True))
+@click.option('-p', '--parenthesis', is_flag=True)
+@click.option('-s', '--substitution', is_flag=True, default=True)
+@click.option('-ol', '--output-lean', is_flag=True)
+@click.option('-osmt', '--output-smt', is_flag=True)
 def generateFromFile(filepath):
     """
     Call mainResult with the parameters in the file at the given path.
