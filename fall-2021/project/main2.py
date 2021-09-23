@@ -34,22 +34,16 @@ def generateFromFile(filepath):
     :param listOfOperators: The list of lists of operators
     :type listOfOperators: list
     """
-    with open(filepath, 'r', encoding='utf-8-sig') as f:
+     with open(filepath, 'r', encoding='utf-8-sig') as f:
         formula = f.readline()
         operators = ast.literal_eval(f.readline())
-        # print(formula)
-        # print(operators)
-        formulaGen = FormulaGenerator(str(formula), operators)
-        #self.mainResult(str(formula), operators)
-        formulaGen.mainResult()
-        # try:
-        #     mainResult(str(formula), operators)
-        # except Exception:
-        #     mainResultOne(formula, operators)
+        formulaGen = FormulaGenerator(strFormula=str(formula), listOfOperators=operators,
+        paren=parenthesis, subs=substitution, output_lean=output_lean, output_smt=output_smt)
         try:
             formulaGen.mainResult()
         except Exception:
-            formulaLEANGen = FormulaGenLEANsyntax(str(formula), operators)
+            formulaLEANGen = FormulaGenLEANsyntax(strFormula=str(formula), listOfOperators=operators, paren=parenthesis,
+            subs=substitution, output_lean=output_lean, output_smt=output_smt)
             formulaLEANGen.mainResultOne()
 
 
