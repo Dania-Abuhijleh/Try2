@@ -6,8 +6,6 @@ print('Running' if __name__ == '__main__' else 'Importing', Path(__file__).resol
 # then produce all permutations of the abstracted formula by changing operators
 # can I use z3 for this by abstracting operators into unknown functions (like f represents and, or) then enumerate all models and reconstruct formula for each model?
 from typing import List, Set
-import builtins
-builtins.Z3_LIB_DIRS = ['C:/Users/dania/AppData/Local/Programs/Python/Python39/Lib/site-packages/z3/lib/libz3.dll']
 from .z3dist import z3
 from z3 import Solver
 from z3 import *
