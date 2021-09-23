@@ -1,6 +1,7 @@
 import z3
 from z3 import *
 import string
+from package.parseZ3toLEAN import ParseZ3toLEAN
 
 s = Solver()
 
@@ -15,12 +16,16 @@ class FormulaGenerator:
     :param strFormula: The base formula.
     :type strFormula: String
     """
-    def __init__(self, listOfOperators, strFormula):
+    def __init__(self, listOfOperators, strFormula, paren=False, subs=True, output_lean=False, output_smt=True):
         self.listOfOperators = listOfOperators
         self.strFormula = strFormula
         self.idx = 0
         self.var = string.ascii_lowercase
         self.modelIdx = 0
+        self.paren = paren 
+        self.subs = subs
+        self.output_lean = output_lean
+        self.output_smt = output_smt
 
 
     def parseListofListOp(self, lop):
@@ -79,10 +84,14 @@ class FormulaGenerator:
         for l in self.listOfOperators:
             listOfAllOper.extend(l)
         formulas = self.getFormulas(self.getModels(), z3_exp)
-        result = self.getFormulasFormatted(formulas)
-        #result.extend(parenCombFormatted(parenComb(strFormula, listOfAllOper)))
-        print(result)
+        result = []
+        if self.subs:
+            result = self.getFormulasFormatted(formulas)
+        #if self.paren:
+            #result.extend(parenCombFormatted(parenComb(strFormula, listOfAllOper)))
+        print(*result, sep='\n')
         #what does children() return when z3 exp has no children? 
+        return result
 
     def numConc(self, s):
         #global listOfOperators
@@ -247,7 +256,11 @@ class FormulaGenerator:
             valid = self.checkValid(z3_exp)
             sat = self.checkSat(z3_exp)
             #diff = diffList[index]
-            result.append(" ".join([str(z3_exp), valid, sat])) #TODO:, str(diff)]))
+            if self.output_smt:
+                result.append(" ".join([str(z3_exp), valid, sat])) #TODO:, str(diff)]))
+            else:
+                lean_exp = ParseZ3toLEAN(z3_exp).start()
+                result.append(" ".join([str(lean_exp), valid, sat]))
         return result
 
     def checkSat(self, z3_exp):
